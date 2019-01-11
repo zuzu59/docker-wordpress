@@ -23,25 +23,6 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
-
-
-   phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        depends_on:
-            - db
-        external_links:
-            - db:mysql
-        ports:
-            - "9191:80"
-        environment:
-            MYSQL_USER: wordpress
-            MYSQL_PASSWORD: wordpress
-            MYSQL_ROOT_PASSWORD: somewordpress
-            PMA_HOST: db
-        
-
-
-
 volumes:
     db_data: {}
 
