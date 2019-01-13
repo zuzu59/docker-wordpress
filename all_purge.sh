@@ -1,7 +1,7 @@
 #!/bin/bash
 #Petit script pour nettoyer tout le binz
 #ATTENTION, cela purge VRAIMENT tout le binz de Docker !
-#zf190107.1751
+#zf190113.1245
 
 ./list.sh
 read -p "Etes-vous certain de vouloir tout effacer ?"
