@@ -7,10 +7,10 @@ services:
        - db_data:/var/lib/mysql
      restart: always
      environment:
-       MYSQL_ROOT_PASSWORD: somewordpress!
+       MYSQL_ROOT_PASSWORD: somewordpress
        MYSQL_DATABASE: wordpress
        MYSQL_USER: wordpress
-       MYSQL_PASSWORD: wordpress!
+       MYSQL_PASSWORD: wordpress
 
    wordpress:
      depends_on:
@@ -22,7 +22,7 @@ services:
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress!
+       WORDPRESS_DB_PASSWORD: wordpress
 
    phpmyadmin:
         image: phpmyadmin/phpmyadmin
@@ -34,8 +34,8 @@ services:
             - "127.0.0.1:9191:80"
         environment:
             MYSQL_USER: wordpress
-            MYSQL_PASSWORD: wordpress!
-            MYSQL_ROOT_PASSWORD: somewordpress!
+            MYSQL_PASSWORD: wordpress
+            MYSQL_ROOT_PASSWORD: somewordpress
             PMA_HOST: db
         
 
