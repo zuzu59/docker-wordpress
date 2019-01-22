@@ -1,4 +1,8 @@
 restore/*.zip
+restore/*.tar
+restore/*.gz
+restore/*.sql
+
 
 *.log
 wp-config.php
