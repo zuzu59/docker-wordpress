@@ -1,12 +1,14 @@
 #!/bin/bash
 #Petit script pour démarrer tout le binz
-#zf190115.1858
+#zf190221.1412
 
 #pour installer Docker et Docker compose sur une machine Ubuntu c'est ici:
 #https://github.com/zuzu59/docker_demo
 
 #docker-compose up
 docker-compose up -d
+sleep 10
+docker-compose exec wordpress /root/restore/chown_restore.sh
 docker-compose logs -f
 
 
@@ -37,5 +39,6 @@ docker-compose down -v --remove-orphans
 
 
 "
+
 
 
