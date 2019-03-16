@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour restorer un site wordpress à partir d'un backup fichiers et db
-#zf190114.1834
+#zf190316.1055
 
 #test si l'argument est vide
 if [ -z "$1" ]
