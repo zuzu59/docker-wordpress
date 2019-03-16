@@ -12,3 +12,9 @@ docker image rm -f $(docker image ls -a -q)
 docker volume rm $(docker volume ls -q)
 docker network rm $(docker network ls -q)
 
+sudo rm -rf ./wp-content
+sudo rm -rf ./site1/wp-content
+sudo rm -rf ./site2/wp-content
+sudo rm -rf ./site3/wp-content
+sudo rm -rf ./site4/wp-content
+
