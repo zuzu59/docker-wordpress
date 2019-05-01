@@ -1,3 +1,5 @@
+#zf190501.1554
+
 version: '3.3'
 
 services:
@@ -11,7 +13,9 @@ services:
             MYSQL_DATABASE: wordpress
             MYSQL_USER: wordpress
             MYSQL_PASSWORD: wordpress!
-            
+        networks:
+            - backend
+
     wordpress:
         depends_on:
             - db
@@ -19,29 +23,40 @@ services:
         volumes:
             - ./restore:/root/restore
             - ./wp-content:/var/www/html/wp-content
-        ports:
-            - "8000:80"
+#        ports:
+#            - "8001:80"
         restart: always
         environment:
             WORDPRESS_DB_HOST: db:3306
             WORDPRESS_DB_USER: wordpress
             WORDPRESS_DB_PASSWORD: wordpress!
-            
+        networks:
+            - frontend
+            - backend
+           
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         depends_on:
             - db
         external_links:
             - db:mysql
-        ports:
-            - "127.0.0.1:9190:80"
+#        ports:
+#            - "127.0.0.1:9191:80"
         restart: always
         environment:
             MYSQL_USER: wordpress
             MYSQL_PASSWORD: wordpress!
             MYSQL_ROOT_PASSWORD: somewordpress!
             PMA_HOST: db
+        networks:
+            - frontend
+            - backend
             
 volumes:
     db_data: {}
+
+networks:
+    backend:
+    frontend:
+        external: true
 
