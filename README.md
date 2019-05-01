@@ -14,7 +14,7 @@ Simplement se positionner dans le bon dossier et faire:
 
 
 ## ATTENTION !
-Aucun port de ces site Wordpress sont *exposés* sur le host. Ils ne sont exposés que depuis le reverse proxy Traefik 'dockérisé'.<br>
+Aucun port de ces site Wordpress sont *exposés* sur le host. Ils ne sont donc exposés que depuis le reverse proxy Traefik 'dockérisé'.<br>
 ```
 https://github.com/zuzu59/docker-traefik
 ```
@@ -25,4 +25,4 @@ Ils utilisent le réseau *interne frontend* de Docker !
 
 
 
-zf190501.1631
+zf190501.1845

@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour démarrer tout le binz
-#zf190221.1412
+#zf190501.1803
 
 #pour installer Docker et Docker compose sur une machine Ubuntu c'est ici:
 #https://github.com/zuzu59/docker_demo
@@ -8,7 +8,7 @@
 #docker-compose up
 docker-compose up -d
 sleep 10
-docker-compose exec wordpress /root/restore/chown_restore.sh
+docker-compose exec wordpress4 /root/restore/chown_restore.sh
 docker-compose logs -f
 
 
@@ -22,7 +22,7 @@ docker-compose ps
 
 pour 'entrer' dans un 'service':
 docker-compose exec nom_service /bin/bash
-docker-compose exec wordpress /bin/bash
+docker-compose exec wordpress4 /bin/bash
 docker-compose exec db /bin/bash
 
 pour arrêter:

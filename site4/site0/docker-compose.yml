@@ -16,7 +16,7 @@ services:
         networks:
             - backend
 
-    wordpress:
+    wordpress0:
         depends_on:
             - db
         image: wordpress:latest
@@ -34,7 +34,7 @@ services:
             - frontend
             - backend
            
-    phpmyadmin:
+    phpmyadmin0:
         image: phpmyadmin/phpmyadmin
         depends_on:
             - db
