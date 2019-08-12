@@ -1,8 +1,8 @@
-restore/*.zip
-restore/*.tar
-restore/*.gz
-restore/*.sql
-wp-content/
+*/restore/*.zip
+*/restore/*.tar
+*/restore/*.gz
+*/restore/*.sql
+*/wp-content/
 
 
 *.log

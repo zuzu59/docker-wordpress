@@ -1,11 +1,14 @@
 #!/bin/bash
 #Petit script pour restorer un site wordpress à partir d'un backup fichiers et db
-#zf190114.1834
+#zf190812.1500
 
 #test si l'argument est vide
 if [ -z "$1" ]
   then
-    echo -e "\nSyntax: ./restore.sh backupfile.zip mysql_root_password \n\n"
+    echo -e "
+
+\nATTENTION, il faut le faire tourner depuis l'intérieur du container Wordpress !\n
+\nSyntax: ./restore.sh backupfile.zip mysql_root_password \n\n"
     exit
 fi
 
