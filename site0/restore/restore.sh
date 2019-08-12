@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour restorer un site wordpress à partir d'un backup fichiers et db
-#zf190812.1500
+#zf190812.1523
 
 #test si l'argument est vide
 if [ -z "$1" ]
@@ -13,7 +13,7 @@ if [ -z "$1" ]
 fi
 
 apt update
-apt install -y nano unzip mysql-client
+apt install -y nano unzip default-mysql-client
 
 #restore les fichiers
 cd /var/www/html

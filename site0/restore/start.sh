@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour lancer la restauration facilement
-#zf190204.1846
+#zf190812.1513
 
 #/root/restore/restore.sh toto.zip somewordpress!
-/root/restore/restore.sh makerspace-lausanne-pw8000-1549298080-complete-2019-02-04-17-36-01.zip somewordpress!
+/root/restore/restore.sh Melaniezufferey-ch-2019-08-11_03-01-46_O3IZ74JD01.zip somewordpress!
