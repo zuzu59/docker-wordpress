@@ -1,6 +1,6 @@
 #!/bin/bash
 #Petit script pour restorer un site wordpress à partir d'un backup fichiers et db
-#zf190301.1713, zf221212.1723
+#zf190301.1713, zf221212.2304
 
 #test si l'argument est vide
 if [ -z "$1" ]
@@ -26,6 +26,6 @@ mysql -u root --password=$2 -h db -e "set global max_allowed_packet=64*1024*1024
 
 mysql -u root --password=$2 -h db -e "DROP DATABASE wordpress;"
 mysql -u root --password=$2 -h db -e "CREATE DATABASE wordpress;"
-#mysql -u root  --password=$2 -h db wordpress < wordpress.sql
-mysql -u root  --password=$2 -h db wordpress < webmas16_fb20.sql
+mysql -u root  --password=$2 -h db wordpress < wordpress.sql
+#mysql -u root  --password=$2 -h db wordpress < webmas16_fb20.sql
 
