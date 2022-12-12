@@ -1,5 +1,5 @@
 version: '3.3'
-#zf190327.1912
+#zf190327.1912, zf221212.1741
 
 services:
     db:
@@ -16,7 +16,9 @@ services:
     wordpress:
         depends_on:
             - db
-        image: wordpress:latest
+#        image: wordpress:latest
+        image: wordpress:6.1.1-php7.4
+
         volumes:
             - ./restore:/root/restore
             - ./wp-content:/var/www/html/wp-content
