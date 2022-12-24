@@ -1,5 +1,5 @@
 version: '3.3'
-#zf190327.1912, zf221224.1219
+#zf190327.1912, zf221212.1741
 
 services:
     db:
@@ -21,7 +21,6 @@ services:
 
         volumes:
             - ./restore:/root/restore
-            - ./apache2:/etc/apache2
             - ./wp-content:/var/www/html/wp-content
         ports:
             - "8000:80"
